@@ -1,0 +1,38 @@
+{% extends "base_accounts.html" %}
+{% load static %}
+
+
+{% block titles %}
+    Aula | Login
+{% endblock %}
+
+
+{% block styles %}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="height:100vh">
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body d-flex align-items-center flex-column">
+                <h2 class="card-title m-3 mb-4">Login</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="d-flex justify-content-between">
+                        <a class="link-body-emphasis black w-50" href="{% url 'accounts:register' %}">Não tem uma conta? Registre-se</a>
+                        <button class="btn btn-success" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}

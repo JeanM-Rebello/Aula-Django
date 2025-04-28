@@ -1,0 +1,13 @@
+{% extends 'base_pages.html' %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2>Editar Produto: {{ object.nome }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="{% url 'pages:list_product' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+{% endblock %}
