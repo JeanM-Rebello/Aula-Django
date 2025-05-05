@@ -4,7 +4,7 @@ from app_pages.models import ProductModel
 class ProductForm(forms.ModelForm):
     class Meta:
         model = ProductModel
-        fields = ['nome', 'codigo_produto', 'quantidade', 'preco']
+        fields = ['name', 'product_code', 'quantity', 'price']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

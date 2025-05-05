@@ -12,7 +12,7 @@ class ProductCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     success_url = reverse_lazy('pages:list_product')
 
     def form_valid(self, form):
-        form.instance.criado_por = self.request.user
+        form.instance.created_by = self.request.user
         return super().form_valid(form)
     
     def test_func(self):

@@ -19,11 +19,11 @@
         <tbody>
             {% for produto in object_list %}
                 <tr>
-                    <td>{{ produto.nome }}</td>
-                    <td>{{ produto.codigo_produto }}</td>
-                    <td>{{ produto.quantidade }}</td>
-                    <td>R$ {{ produto.preco }}</td>
-                    <td>{{ produto.criado_por }}</td>
+                    <td>{{ produto.name }}</td>
+                    <td>{{ produto.product_code }}</td>
+                    <td>{{ produto.quantity }}</td>
+                    <td>R$ {{ produto.price }}</td>
+                    <td>{{ produto.created_by  }}</td>
                     <td>
                         <a href="{% url 'pages:update_product' produto.pk %}" class="btn btn-sm btn-primary">Editar</a>
                         <a href="{% url 'pages:delete_product' produto.pk %}" class="btn btn-sm btn-danger">Excluir</a>

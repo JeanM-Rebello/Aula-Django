@@ -12,7 +12,7 @@ class ProductUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     success_url = reverse_lazy('pages:list_product')
 
     def form_valid(self, form):
-        form.instance.atualizado_por = self.request.user
+        form.instance.updated_by = self.request.user
         return super().form_valid(form)
     
     def test_func(self):
